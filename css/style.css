@@ -121,3 +121,8 @@ footer a {
 #me ul, #work ul, #language ul {
   padding: 20px 0;
 }
+
+#disabled-link {
+  pointer-events: none;
+  color: gray;
+}
