@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: rgb(226, 226, 226);
+}
+
+p, h1, li, img {
+  overflow: hidden;
+  animation: typing 0.5s;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(59, 59, 59);
+  color: azure;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+header li {
+  color: azure;
+}
+
+main {
+  width: 100%;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(59, 59, 59);
+  color: azure;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+footer a {
+  color: azure;
+  text-decoration: none;
+}
+
+footer i {
+  font-size: 30px;
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#pf-img-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: justify;
+  gap: 60px;
+  padding: 0 20%;
+  height: 100vh;
+  margin-top: 80px;
+}
+
+#profile-img {
+  width: 200px;
+  border-radius: 100px;
+  border: 10px solid rgb(59, 59, 59);
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+#me ul, #work ul {
+  padding: 40px 0;
+}
