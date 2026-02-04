@@ -1,112 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <title>Alan Mateus</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="nav-container">
-          <a><li>Curículo</li></a>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div id="profile">
-        <div id="pf-img-container">
-          <img id="profile-img" src="assets/img/alan.jpg" alt="" />
-          <h1>Alan Mateus</h1>
-        </div>
-        <div>
-          <p>
-            Olá, tudo bem? Bem vindo(a) a minha simples página, onde irei
-            explanar alguns conhecimentos a meu respeito.
-          </p>
-        </div>
-        <div id="about">
-          <div id="me">
-            <h1>Sobre mim</h1>
-            <ul>
-              <li>
-                Mostro-me apto para desempenhar qualquer função a mim concedida,
-                demonstrar que sou capaz de realizar com sucesso as tarefas,
-                desenvolvendo meus conhecimentos e os aperfeiçoando cada vez
-                mais.
-              </li>
-              <li>
-                Tenho agilidade e habilidades que irão me auxiliar no
-                cumprimento das demanda, além de rapidez no aprendizado a medida
-                do necessário. Busco sempre o aperfeçoamente das minhas técnicas
-                e do trabalho em equipe, além de comunicação em geral.
-              </li>
-            </ul>
-          </div>
-          <div id="work">
-            <h1>Formação e trabalho</h1>
-            <ul>
-              <li>
-                => Ensino Superior em andamento [6º período] | UNIFACOL - Centro
-                Universitário FACOL | Sistemas de Informação
-              </li>
-              <li>
-                => Ensino Técnico incompleto | ETE Limoeiro – Escola Técnica
-                Estadual | Análise e Desenvolvimento de Sistemas
-              </li>
-              <li>=> Ensino Médio Completo | 3º Milênio Colégio e Curso</li>
-            </ul>
-            <hr />
-            <ul>
-              <li>
-                => Atuando como desenvolvedor junior | Marques Consult,
-                consultoria e processamento de dados na área da saúde
-              </li>
-            </ul>
-          </div>
-          <div id="language">
-            <h1>Ferramentas</h1>
-            <ul>
-              <li>
-                Programação:
-                <i class="devicon-html5-plain"></i>
-                <i class="devicon-css3-plain"></i>
-                <i class="devicon-javascript-plain"></i>
-                <i class="devicon-java-plain"></i>
-                <i class="devicon-python-plain"></i>
-                <i class="devicon-angular-plain"></i>
-              </li>
-              <li>
-                Gerenciadores de banco de dados:
-                <i class="devicon-mysql-original"></i>
-                <i class="devicon-postgresql-plain" aria-disabled="false"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <ul>
-        <li>
-          <a href="https://github.com/alanmts-am" target="_blank"
-            ><i class="devicon-github-original"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/alan-mateus-7720512ba/"
-            target="_blank"
-            ><i class="devicon-linkedin-plain"></i
-          ></a>
-        </li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Alan Mateus - Desenvolvedor Junior" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <title>Alan Mateus | Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#" style="text-decoration: none;">
+        <div class="logo">AM</div>
+      </a>
+      <ul class="nav-container">
+        <li><a href="#me">Sobre</a></li>
+        <li><a href="#work">Experiência</a></li>
+        <li><a href="#language">Stack</a></li>
+        <li><a href="#projects">Projetos</a></li>
       </ul>
-    </footer>
-  </body>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profile">
+      <div id="pf-img-container">
+        <img id="profile-img" src="assets/img/alan.png" alt="Alan Mateus" />
+        <h1>Alan Mateus</h1>
+      </div>
+      <div>
+        <p>
+          Desenvolvedor em constante evolução, focado em criar soluções eficientes e modernas.
+          Bem-vindo ao meu espaço digital.
+        </p>
+      </div>
+    </section>
+
+    <div id="about">
+      <section class="glass-card" id="me">
+        <h1>Sobre mim</h1>
+        <ul>
+          <li>
+            Apto para desempenhar funções com excelência, sempre buscando superar desafios e entregar resultados
+            consistentes.
+          </li>
+          <li>
+            Foco no aprendizado contínuo e aperfeiçoamento técnico, com facilidade de adaptação a novas ferramentas e
+            metodologias.
+          </li>
+          <li>
+            Habilidades de comunicação e trabalho em equipe, essenciais para o desenvolvimento de projetos
+            colaborativos.
+          </li>
+        </ul>
+      </section>
+
+      <section class="glass-card" id="work">
+        <h1>Formação e Experiência</h1>
+        <div class="education">
+          <h3>Educação</h3>
+          <ul>
+            <li>
+              Bacharel em Sistemas de Informação | UNIFACOL
+            </li>
+            <li>
+              Ensino técnico em Análise e Desenvolvimento de Sistemas | ETE Limoeiro
+            </li>
+            <li>Ensino Médio Completo | 3º Milênio </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="experience">
+          <h3>Profissional</h3>
+          <ul>
+            <li>
+              Desenvolvedor pleno e referência em banco de dados | Marques Consult
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="glass-card" id="language">
+        <h1>Stack Tecnológica</h1>
+        <div class="tools-group">
+          <h3>Linguagens & Frameworks</h3>
+          <div class="icons-container">
+            <i class="devicon-html5-plain colored" title="HTML5"></i>
+            <i class="devicon-css3-plain colored" title="CSS3"></i>
+            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+            <i class="devicon-java-plain colored" title="Java"></i>
+            <i class="devicon-python-plain colored" title="Python"></i>
+            <i class="devicon-angular-plain colored" title="Angular"></i>
+          </div>
+        </div>
+        <div class="tools-group" style="margin-top: 2rem;">
+          <h3>Banco de Dados</h3>
+          <div class="icons-container">
+            <i class="devicon-mysql-original colored" title="MySQL"></i>
+            <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass-card" id="projects">
+        <h1>Projetos</h1>
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          Em desenvolvimento
+        </div>
+        <p style="margin-top: 1rem;">
+          Novas soluções e experimentos estão sendo construídos. Em breve você poderá conferir os detalhes aqui.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="https://github.com/alanmts-am" target="_blank" aria-label="GitHub">
+          <i class="devicon-github-original"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/alan-mateus-7720512ba/" target="_blank" aria-label="LinkedIn">
+          <i class="devicon-linkedin-plain"></i>
+        </a>
+      </li>
+    </ul>
+    <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem;">
+      &copy; 2024 Alan Mateus. Desenvolvido com paixão.
+    </p>
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.glass-card');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+      observer.observe(card);
+    });
+  </script>
+</body>
+
 </html>
