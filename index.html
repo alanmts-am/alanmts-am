@@ -130,13 +130,18 @@
   <footer>
     <ul>
       <li>
-        <a href="https://github.com/alanmts-am" target="_blank" aria-label="GitHub">
-          <i class="devicon-github-original"></i>
+        <a href="https://www.linkedin.com/in/alan-mateus-7720512ba/" target="_blank" aria-label="LinkedIn">
+          <i class="devicon-linkedin-plain"></i>
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/alan-mateus-7720512ba/" target="_blank" aria-label="LinkedIn">
-          <i class="devicon-linkedin-plain"></i>
+        <a href="mailto:alanmssilva@outlook.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/81995316902" target="_blank" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
         </a>
       </li>
     </ul>
@@ -194,7 +199,7 @@
           const el = document.createElement('div');
           el.className = 'glass-card repo-card';
 
-          const updatedDate = new Date(repo.updated_at).toLocaleDateString('pt-BR', {
+          const pushedDate = new Date(repo.pushed_at).toLocaleDateString('pt-BR', {
             day: '2-digit',
             month: 'short',
             year: 'numeric'
@@ -207,7 +212,7 @@
             </div>
             <div class="repo-date">
               <i class="fa-regular fa-calendar-check"></i>
-              <span>Atualizado em ${updatedDate}</span>
+              <span>Atualizado em ${pushedDate}</span>
             </div>
             <div class="repo-stats">
               <div class="repo-stat">

@@ -426,8 +426,8 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   background: var(--glass-bg);
   border-radius: 50%;
   border: 1px solid var(--glass-border);
