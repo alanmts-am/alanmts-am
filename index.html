@@ -112,7 +112,6 @@
     <section id="projects">
       <h1>Últimos Projetos</h1>
       <div id="repos-grid" class="repos-grid">
-        <!-- Repositórios serão carregados aqui via JS -->
         <div class="glass-card" style="grid-column: 1/-1; text-align: center; padding: 4rem;">
           <div class="status-badge">
             <span class="pulse-dot"></span>
@@ -205,20 +204,22 @@
             <div class="repo-content">
               <h3>${repo.name}</h3>
               <p>${repo.description || 'Explorando novas tecnologias e resolvendo problemas.'}</p>
-              <div class="repo-date">
-                <i class="fa-regular fa-calendar-check"></i>
-                <span>Atualizado em ${updatedDate}</span>
-              </div>
+            </div>
+            <div class="repo-date">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>Atualizado em ${updatedDate}</span>
             </div>
             <div class="repo-stats">
               <div class="repo-stat">
                 <i class="fa-solid fa-star"></i>
                 <span>${repo.stargazers_count}</span>
               </div>
+              ${repo.language ? `
               <div class="repo-stat">
                 <i class="fa-solid fa-code"></i>
-                <span>${repo.language || '...'}</span>
+                <span>${repo.language}</span>
               </div>
+            ` : ''}
               <a href="${repo.html_url}" target="_blank" class="repo-link">
                 Github <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>

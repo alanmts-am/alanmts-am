@@ -235,15 +235,13 @@ main {
 
 .repo-card p {
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
+  margin-bottom: 2rem;
 }
 
 .repo-stats {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-top: auto;
   padding-top: 1rem;
 }
 
@@ -265,6 +263,7 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .repo-date i {
