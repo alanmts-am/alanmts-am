@@ -272,6 +272,19 @@ main {
   font-size: 0.85rem;
 }
 
+.company-link {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+.company-link:hover {
+  border-bottom-color: var(--accent-light);
+  opacity: 0.8;
+}
+
 .repo-link {
   text-decoration: none;
   color: var(--accent-light);
@@ -354,6 +367,43 @@ main {
 #language i:hover {
   color: var(--accent-light);
   transform: scale(1.2) translateY(-5px);
+}
+
+/* View More Button */
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.2);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-light);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(5, 150, 105, 0.3);
+}
+
+.btn-primary i {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+  transform: translateX(5px);
 }
 
 /* Footer */
