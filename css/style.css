@@ -190,6 +190,102 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+#projects {
+  margin-top: 4rem;
+}
+
+#projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--accent-light);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#projects h1::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.repo-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.repo-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.repo-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.repo-stat i {
+  color: var(--accent-color);
+}
+
+.repo-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.repo-date i {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+}
+
+.repo-link {
+  text-decoration: none;
+  color: var(--accent-light);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.repo-link:hover {
+  color: var(--text-primary);
+  transform: translateX(5px);
 }
 
 .glass-card {

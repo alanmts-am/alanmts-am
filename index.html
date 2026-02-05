@@ -7,6 +7,7 @@
   <meta name="description" content="Portfolio de Alan Mateus - Desenvolvedor Junior" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <title>Alan Mateus | Portfolio</title>
 </head>
 
@@ -104,18 +105,20 @@
           </div>
         </div>
       </section>
-
-      <section class="glass-card" id="projects">
-        <h1>Projetos</h1>
-        <div class="status-badge">
-          <span class="pulse-dot"></span>
-          Em desenvolvimento
-        </div>
-        <p style="margin-top: 1rem;">
-          Novas soluções e experimentos estão sendo construídos. Em breve você poderá conferir os detalhes aqui.
-        </p>
-      </section>
     </div>
+
+    <section id="projects">
+      <h1>Últimos Projetos</h1>
+      <div id="repos-grid" class="repos-grid">
+        <!-- Repositórios serão carregados aqui via JS -->
+        <div class="glass-card" style="grid-column: 1/-1; text-align: center; padding: 4rem;">
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            Carregando projetos do GitHub...
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -132,12 +135,11 @@
       </li>
     </ul>
     <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem;">
-      &copy; 2024 Alan Mateus. Desenvolvido com paixão.
+      &copy; 2026 Alan Mateus. Desenvolvido com paixão.
     </p>
   </footer>
 
   <script>
-    const cards = document.querySelectorAll('.glass-card');
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -148,15 +150,90 @@
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    cards.forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-      observer.observe(card);
+    function applyAnimations() {
+      const cards = document.querySelectorAll('.glass-card');
+      cards.forEach(card => {
+        if (card.style.opacity !== '1') {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(30px)';
+          card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+          observer.observe(card);
+        }
+      });
+    }
+
+    async function fetchGitHubRepos() {
+      const grid = document.getElementById('repos-grid');
+      const user = 'alanmts-am';
+
+      try {
+        const res = await fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=10`);
+        if (!res.ok) throw new Error('Erro na API');
+
+        const data = await res.json();
+        const displayList = data.filter(r => !r.fork).slice(0, 6);
+
+        if (displayList.length === 0) {
+          grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Nenhum repositório público encontrado.</p>';
+          return;
+        }
+
+        grid.innerHTML = '';
+        displayList.forEach(repo => {
+          const el = document.createElement('div');
+          el.className = 'glass-card repo-card';
+
+          const updatedDate = new Date(repo.updated_at).toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+          });
+
+          el.innerHTML = `
+            <div class="repo-content">
+              <h3>${repo.name}</h3>
+              <p>${repo.description || 'Explorando novas tecnologias e resolvendo problemas.'}</p>
+              <div class="repo-date">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Atualizado em ${updatedDate}</span>
+              </div>
+            </div>
+            <div class="repo-stats">
+              <div class="repo-stat">
+                <i class="fa-solid fa-star"></i>
+                <span>${repo.stargazers_count}</span>
+              </div>
+              <div class="repo-stat">
+                <i class="fa-solid fa-code"></i>
+                <span>${repo.language || '...'}</span>
+              </div>
+              <a href="${repo.html_url}" target="_blank" class="repo-link">
+                Github <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          `;
+          grid.appendChild(el);
+        });
+
+        applyAnimations();
+      } catch (err) {
+        console.error(err);
+        grid.innerHTML = `
+          <div class="glass-card" style="grid-column: 1/-1; text-align: center; padding: 4rem;">
+            <p style="color: #ef4444;">Ops! Não conseguimos carregar os projetos. Tente recarregar a página.</p>
+          </div>
+        `;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchGitHubRepos();
+      applyAnimations();
     });
   </script>
 </body>
