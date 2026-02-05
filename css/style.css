@@ -193,25 +193,28 @@ main {
   margin-bottom: 4rem;
 }
 
-#projects {
-  margin-top: 4rem;
-}
-
+.section-title,
 #projects h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: var(--accent-light);
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+.section-title::before,
 #projects h1::before {
   content: '';
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background: var(--accent-color);
   border-radius: 4px;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .repos-grid {
