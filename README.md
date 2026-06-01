@@ -31,9 +31,8 @@ Sou um profissional em constante evolução, focado em construir soluções robu
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 ## 📊 Estatísticas do GitHub:
-![](https://github-readme-stats.vercel.app/api?username=alanmts-am&theme=shadow_green&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=alanmts-am&theme=shadow_green&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=alanmts-am&theme=shadow_green&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+![](https://github-readme-activity-graph.vercel.app/graph?username=alanmts-am&theme=merko&hide_border=true)<br/>
+![](https://streak-stats.demolab.com?user=alanmts-am&theme=shadow_green&hide_border=false)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=alanmts-am&icon=0&color=3)](https://visitcount.itsvg.in)
